@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>쇼핑하우</title>
+    <script
+      src="https://kit.fontawesome.com/2d323a629b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="area_top">
+        <img
+          src="//search1.daumcdn.net/search/cdn/simage/shopping/v2/common/nav/logo_shw.png"
+          class="area_top__icon"
+        />
+        <div class="area_top__search">
+          <input type="text" placeholder="1 가정용 금고" />
+          <button>
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <nav>
+        <div class="nav_container">
+          <div class="nav_left">
+            <div class="category">
+              <i class="fas fa-bars"></i>
+              <span>카테고리</span>
+            </div>
+            <span class="nav_line"></span>
+            <ul class="show">
+              <li>핫딜</li>
+              <li>베스트100</li>
+              <li>할인특가</li>
+              <li>기획전</li>
+            </ul>
+            <span class="nav_line"></span>
+            <ul class="keyword">
+              <li>#건강식품</li>
+              <li>#제철음식</li>
+              <li>#블루투스이어폰</li>
+              <li>#커블체어</li>
+              <li>#노트북</li>
+            </ul>
+          </div>
+          <div class="nav_right">
+            <div class="user">
+              <div>
+                <i class="far fa-user-circle"></i>
+                <span>로그인</span>
+              </div>
+              <div>
+                <i class="far fa-stop-circle"></i>
+                <span>최근본 상품</span>
+                <i class="fas fa-caret-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main_wrapper">
+        <div class="main_container">
+          <section class="section_best">
+            <img
+              src="//shop4.daumcdn.net/shophow/sib/0_210219174900_cCDgZtbAhPiBQqcJamsODOWNoVrXILeM"
+            />
+          </section>
+          <section class="section_themes">
+            <div class="slide_box">
+              <ul class="slide_list"></ul>
+            </div>
+            <div class="slide_paging">
+              <ul class="slide_paging_square">
+                <li class="page1 black">1</li>
+                <li class="page2">2</li>
+                <li class="page3">3</li>
+              </ul>
+              <button class="prev_button">〈</button>
+              <button class="next_button">〉</button>
+            </div>
+          </section>
+          <section class="section_products">
+            <ul class="section_products_list">
+              <!--제품들 10개 들어갈 예정-->
+            </ul>
+            <button class="section_products_seeMore">더보기 ▼</button>
+          </section>
+          <section class="section_categories">
+            <span>지금 뜨는 테마 카테고리</span>
+            <div>플렉스박스</div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="/js/slide.js"></script>
+    <script type="text/javascript" src="/js/moreProducts.js"></script>
+  </body>
+</html>
