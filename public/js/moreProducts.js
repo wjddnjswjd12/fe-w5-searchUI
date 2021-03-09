@@ -1,6 +1,5 @@
 class MoreProducts {
   constructor() {
-    //
     this.rawData = {};
     this.seeMoreBtn = document.querySelector(".section_products_seeMore");
     this.addEvents();
@@ -49,5 +48,4 @@ class MoreProducts {
   }
 }
 
-const mBtn = new MoreProducts();
-mBtn.renderHTML();
+export { MoreProducts };

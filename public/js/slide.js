@@ -5,11 +5,10 @@ class Slide {
     this.prevBtn = prevBtn;
     this.rawDatas = {};
     this.counter = 1;
-    this.size = 514; //slide 한개의 크기. 다르게 받아볼 예정...
+    this.size = 514;
     this.addEvent();
   }
   loadSlideItems() {
-    //강의..url넘기는거 수정해보기....
     return fetch("http://localhost:3000/planningEvent.json").then((response) =>
       response.json()
     );
@@ -79,12 +78,4 @@ class Slide {
   }
 }
 
-window.addEventListener("load", () => {
-  const getNode = (className) => document.querySelector(className);
-  const slideList = getNode(".slide_list");
-  const nextBtn = getNode(".next_button");
-  const prevBtn = getNode(".prev_button");
-
-  const carouselSlide = new Slide(slideList, nextBtn, prevBtn);
-  carouselSlide.renderHtml();
-});
+export { Slide };
