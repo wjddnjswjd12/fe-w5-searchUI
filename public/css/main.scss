@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline: red;
 }
 
 button,
@@ -27,6 +26,7 @@ header {
   height: 193px;
   padding-top: 43px;
   border-bottom: 1px solid #cecfd1;
+
   .area_top {
     width: 843px;
     height: 55px;
@@ -45,6 +45,7 @@ header {
       border: 1px solid #cecfd1;
       border-radius: 10px;
       padding-left: 30px;
+
       input {
         width: 92%;
         height: 100%;
@@ -61,22 +62,28 @@ header {
         top: 0;
         right: 0;
       }
-      .area_top__recomList {
+      .area_top_search_rec {
         position: absolute;
-        top: 0;
         width: 80%;
-        height: 80%;
-        margin: 5px auto;
-        padding: 10px 0px 10px 0px;
-        font-size: 20px;
-        font-weight: bold;
-        color: #808080;
+        height: 78%;
         overflow: hidden;
-        background: #a7a7a7;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        li {
+        margin: 6px 0px 6px 0px;
+        top: 0;
+        .area_top__recomList {
+          position: absolute;
+          top: 0;
+          width: 80%;
+          height: 80%;
+          padding: 5px 0px 5px 0px;
+          font-size: 20px;
+          font-weight: bold;
+          color: #808080;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          li {
+            padding: 5px 0px 5px 0px;
+          }
         }
       }
     }
