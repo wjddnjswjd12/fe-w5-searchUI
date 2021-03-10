@@ -15,14 +15,20 @@
           src="//search1.daumcdn.net/search/cdn/simage/shopping/v2/common/nav/logo_shw.png"
           class="area_top__icon"
         />
-
         <div class="area_top__search">
-          <input type="text" />
+          <input class="area_top__search_input" type="text" ></input>
           <button>
             <i class="fas fa-search"></i>
           </button>
-          <div class="area_top_search_rec">
-            <ul class="area_top__recomList"></ul>
+          <div class="area_top__search_recRoll">
+            <ol class="area_top__recomList flex"></ol>
+          </div>
+          <div class="area_top__search_recBox none">
+            <span class="recBox_span">인기 쇼핑 키워드</span>
+            <div class="recBox_container">
+              <ol class="recBox_leftOL"></ol>
+              <ol class="recBox_rightOL"></ol>
+            </div>
           </div>
         </div>
       </div>
