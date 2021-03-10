@@ -208,24 +208,12 @@ const startRolling = (datas) => {
   searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
   // (1) test를 async로 감싸는 대신, for문을 async 즉시실행함수로 감싸도 된다
   (async () => {
-    // (2) forEach 대신 for ... of를 사용한다
     while (1) {
       await roll();
     }
   })();
 };
 
-// searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
-//   setInterval(() => {
-// searchUl.style.transition = "transform 0.3s ease-in-out";
-// counter++;
-// searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
-//     if (counter === 13) {
-// searchUl.style.transition = "none";
-// counter = 0;
-// searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
-//     }
-//   }, 2000);
 const getRecomBoxData = (datas, start, end) => {
   //클릭하면 추천검색어 뜨게하는 function
   let arr = [];
