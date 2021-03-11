@@ -251,6 +251,16 @@ const renderRecomBox = (datas) => {
   rightOL.innerHTML = getRecomBoxData(datas, 5, 10);
 };
 
+function requestJsonp(word, callback) {
+  const script = document.createElement("script");
+  script.src = `https://suggest-bar.daum.net/suggest?callback=${callback}&limit=10&mode=json&code=utf_in_out&q=${word}&id=shoppinghow_suggest`;
+  document.body.appendChild(script);
+}
+
+window["responseJsonpData"] = function (data) {
+  console.log(data);
+};
+
 ulDiv.addEventListener("click", (e) => {
   searchUl.classList.remove("flex");
   searchDiv.classList.add("border_red");
@@ -271,6 +281,7 @@ searchInput.addEventListener("input", () => {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { loadDatas, recomKeywordURL };
 >>>>>>> 589b5be... [add] ul in html and make li by javascript
 =======
@@ -279,3 +290,6 @@ export { renderSearchRecom };
 >>>>>>> 21f3c32... [refactor] PR review:  use async await
 =======
 >>>>>>> 16e81ed... conflict test
+=======
+export { renderSearchRecom, requestJsonp };
+>>>>>>> 2faff58... [fix] jsonp callback url part

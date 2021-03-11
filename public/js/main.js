@@ -3,7 +3,11 @@ import { Slide } from "./slide.js";
 import { MoreProducts } from "./moreProducts.js";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { renderSearchRecom } from "./searchUI.js";
+=======
+import { renderSearchRecom, requestJsonp } from "./searchUI.js";
+>>>>>>> 2faff58... [fix] jsonp callback url part
 
 window.addEventListener("DOMContentLoaded", () => {
 =======
@@ -26,6 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const mBtn = new MoreProducts();
   mBtn.renderHTML();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -65,3 +70,8 @@ window["responseJsonpData"] = function (data) {
 
 renderSearchRecom();
 >>>>>>> 21f3c32... [refactor] PR review:  use async await
+=======
+  renderSearchRecom();
+  requestJsonp("자동차", "responseJsonpData");
+});
+>>>>>>> 2faff58... [fix] jsonp callback url part
