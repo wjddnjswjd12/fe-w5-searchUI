@@ -66,9 +66,13 @@ header {
 =======
 =======
 
+<<<<<<< HEAD
 >>>>>>> 1b17b97... [add] setInterval function to move searchUI
       input {
 >>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
+=======
+      .area_top__search_input {
+>>>>>>> 0133fc7... [add] eventListener on searchBox
         width: 92%;
         height: 100%;
         border: none;
@@ -76,11 +80,15 @@ header {
         font-size: 20px;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0133fc7... [add] eventListener on searchBox
 
       .area_top__search_input:focus {
         outline: none;
       }
 
+<<<<<<< HEAD
       button {
         height: 100%;
         width: 8%;
@@ -91,11 +99,18 @@ header {
         width: 8%;
         color: rgb(255, 45, 45);
 >>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
+=======
+      button {
+        height: 100%;
+        width: 8%;
+        color: #ff2d2d;
+>>>>>>> 0133fc7... [add] eventListener on searchBox
         position: absolute;
         font-size: 23px;
         top: 0;
         right: 0;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,6 +199,9 @@ header {
 =======
       .area_top_search_rec {
 >>>>>>> 1b17b97... [add] setInterval function to move searchUI
+=======
+      .area_top__search_recRoll {
+>>>>>>> 0133fc7... [add] eventListener on searchBox
         position: absolute;
         width: 80%;
         height: 78%;
@@ -199,18 +217,74 @@ header {
           font-size: 20px;
           font-weight: bold;
           color: #808080;
-          display: flex;
+          display: none;
           flex-direction: column;
           justify-content: space-between;
           li {
             padding: 5px 0px 5px 0px;
           }
         }
+        .flex {
+          display: flex;
+        }
+      }
+
+      .area_top__search_recBox {
+        width: 100%;
+        z-index: 10;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        margin: 0 auto;
+        border: 1px solid #ff2d2d;
+        border-radius: 10px;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .recBox_container {
+          display: flex;
+          font-size: 15px;
+          color: #808080;
+        }
+        .recBox_span {
+          color: #a7a7a7;
+          font-size: 16px;
+          font-weight: bold;
+          margin: 15px 0px;
+        }
+        .recBox_leftOL {
+          width: 40%;
+          margin-right: 60px;
+        }
+        .recBox_rightOL {
+          width: 40%;
+        }
+        .recomList_li {
+          width: 200px;
+          height: 40px;
+          .recomList_num {
+            color: #000;
+            margin-right: 10px;
+          }
+        }
+      }
+      .none {
+        display: none;
       }
 >>>>>>> 589b5be... [add] ul in html and make li by javascript
     }
+
+    .border_red {
+      border: 1px solid #ff2d2d;
+    }
   }
+<<<<<<< HEAD
 >>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
+=======
+
+>>>>>>> 0133fc7... [add] eventListener on searchBox
   nav {
     width: 100vw;
     height: 55px;
