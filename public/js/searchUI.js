@@ -4,6 +4,7 @@ const recomKeywordURL =
   "https://shoppinghow.kakao.com/v1.0/shophow/top/recomKeyword.json";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const searchUl = _.$(".area_top__recomList");
 const ulDiv = _.$(".area_top__search_recRoll");
 const leftOL = _.$(".recBox_leftOL");
@@ -24,6 +25,12 @@ const renderSearchRecom = async () => {
   renderRecomBox(datas.list);
   startRolling(datas.list);
 =======
+=======
+const searchUl = _.$(".area_top__recomList");
+const liHeight = 37;
+let counter = 0;
+
+>>>>>>> 1b17b97... [add] setInterval function to move searchUI
 const loadDatas = (url) => {
   fetch(url)
     .then((response) => response.json())
@@ -45,12 +52,17 @@ const makeHTML = (datas) => {
   let str = "";
   const recomUl = _.$(".area_top__recomList");
   datas.forEach((data, i) => (str += `<li> ${i + 1}  ${data.keyword}</li>`));
+<<<<<<< HEAD
   recomUl.innerHTML = str;
 >>>>>>> 589b5be... [add] ul in html and make li by javascript
+=======
+  recomUl.innerHTML = str + getFirstLi(datas);
+>>>>>>> 1b17b97... [add] setInterval function to move searchUI
 };
 
 const getFirstLi = (datas) => {
   //
+<<<<<<< HEAD
 <<<<<<< HEAD
   return `<li id="firstClone"> 1  ${datas[0].keyword}</li>`;
 };
@@ -125,10 +137,28 @@ searchInput.addEventListener("input", () => {
 export { renderSearchRecom };
 =======
   return `<li>${datas[0]}</li>`;
+=======
+  return `<li id="firstClone"> 1  ${datas[0].keyword}</li>`;
+>>>>>>> 1b17b97... [add] setInterval function to move searchUI
 };
-const getLastLi = () => {
-  //
+const getLastLi = (datas) => {
+  return `<li id="lastClone"> ${datas.length}  ${
+    datas[datas.length - 1].keyword
+  }</li>`;
 };
+
+searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
+
+setInterval(() => {
+  searchUl.style.transition = "transform 0.3s ease-in-out";
+  counter++;
+  searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
+  if (counter === 13) {
+    searchUl.style.transition = "none";
+    counter = 0;
+    searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
+  }
+}, 2000);
 
 export { loadDatas, recomKeywordURL };
 >>>>>>> 589b5be... [add] ul in html and make li by javascript
