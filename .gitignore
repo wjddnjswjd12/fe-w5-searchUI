@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /node_modules
 main.css
 main.css.map
 =======
 /node_modules
 >>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
+=======
+/node_modules
+main.css
+main.css.map
+>>>>>>> bc4598d... [refactor] prReview: change setInterval to setTimeout

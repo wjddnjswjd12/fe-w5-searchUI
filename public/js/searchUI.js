@@ -34,6 +34,7 @@ const searchDiv = _.$(".area_top__search");
 const searchInput = _.$(".area_top__search_input");
 const searchRecBox = _.$(".area_top__search_recBox");
 
+<<<<<<< HEAD
 const liHeight = 37;
 let counter = 0;
 
@@ -53,6 +54,8 @@ const loadDatas = (url) => {
     });
 >>>>>>> 0133fc7... [add] eventListener on searchBox
 =======
+=======
+>>>>>>> bc4598d... [refactor] prReview: change setInterval to setTimeout
 const loadDatas = async (url) => {
   const data = await fetch(url);
   const dataJson = await data.json();
@@ -63,8 +66,12 @@ const renderSearchRecom = async () => {
   const datas = await loadDatas(recomKeywordURL);
   makeHTML(datas.list);
   renderRecomBox(datas.list);
+<<<<<<< HEAD
   startRolling();
 >>>>>>> 21f3c32... [refactor] PR review:  use async await
+=======
+  startRolling(datas.list);
+>>>>>>> bc4598d... [refactor] prReview: change setInterval to setTimeout
 };
 
 const makeHTML = (datas) => {
@@ -179,20 +186,46 @@ export { renderSearchRecom };
 >>>>>>> 1b17b97... [add] setInterval function to move searchUI
 };
 
-const startRolling = () => {
+const startRolling = (datas) => {
+  const liHeight = 37;
+  let counter = 0;
+
+  const roll = () =>
+    new Promise((resolve) =>
+      setTimeout(() => {
+        searchUl.style.transition = "transform 0.3s ease-in-out";
+        counter++;
+        searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
+        if (counter === 13) {
+          searchUl.style.transition = "none";
+          counter = 0;
+          searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
+        }
+        resolve();
+      }, 2000)
+    );
+
   searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
-  setInterval(() => {
-    searchUl.style.transition = "transform 0.3s ease-in-out";
-    counter++;
-    searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
-    if (counter === 13) {
-      searchUl.style.transition = "none";
-      counter = 0;
-      searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
+  // (1) test를 async로 감싸는 대신, for문을 async 즉시실행함수로 감싸도 된다
+  (async () => {
+    // (2) forEach 대신 for ... of를 사용한다
+    while (1) {
+      await roll();
     }
-  }, 2000);
+  })();
 };
 
+// searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
+//   setInterval(() => {
+// searchUl.style.transition = "transform 0.3s ease-in-out";
+// counter++;
+// searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
+//     if (counter === 13) {
+// searchUl.style.transition = "none";
+// counter = 0;
+// searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
+//     }
+//   }, 2000);
 const getRecomBoxData = (datas, start, end) => {
   //클릭하면 추천검색어 뜨게하는 function
   let arr = [];
