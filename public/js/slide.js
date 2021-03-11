@@ -6,6 +6,7 @@ class Slide {
     this.rawDatas = {};
     this.counter = 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.size = 514;
     this.addEvent();
   }
@@ -17,6 +18,12 @@ class Slide {
   loadSlideItems() {
     //강의..url넘기는거 수정해보기....
 >>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
+=======
+    this.size = 514;
+    this.addEvent();
+  }
+  loadSlideItems() {
+>>>>>>> 589b5be... [add] ul in html and make li by javascript
     return fetch("http://localhost:3000/planningEvent.json").then((response) =>
       response.json()
     );
@@ -87,6 +94,7 @@ class Slide {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { Slide };
 =======
 window.addEventListener("load", () => {
@@ -99,3 +107,6 @@ window.addEventListener("load", () => {
   carouselSlide.renderHtml();
 });
 >>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
+=======
+export { Slide };
+>>>>>>> 589b5be... [add] ul in html and make li by javascript
