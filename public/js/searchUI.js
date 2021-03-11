@@ -87,6 +87,16 @@ const renderRecomBox = (datas) => {
   rightOL.innerHTML = getRecomBoxData(datas, 5, 10);
 };
 
+function requestJsonp(word, callback) {
+  const script = document.createElement("script");
+  script.src = `https://suggest-bar.daum.net/suggest?callback=${callback}&limit=10&mode=json&code=utf_in_out&q=${word}&id=shoppinghow_suggest`;
+  document.body.appendChild(script);
+}
+
+window["responseJsonpData"] = function (data) {
+  console.log(data);
+};
+
 ulDiv.addEventListener("click", (e) => {
   searchUl.classList.remove("flex");
   searchDiv.classList.add("border_red");
@@ -106,4 +116,4 @@ searchInput.addEventListener("input", () => {
   _.$(".area_top__search_recBox").innerHTML = "";
 });
 
-export { renderSearchRecom };
+export { renderSearchRecom, requestJsonp };
