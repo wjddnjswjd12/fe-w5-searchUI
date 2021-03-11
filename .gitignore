@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /node_modules
 main.css
 main.css.map
@@ -11,3 +12,8 @@ main.css.map
 main.css
 main.css.map
 >>>>>>> bc4598d... [refactor] prReview: change setInterval to setTimeout
+=======
+/node_modules
+main.css
+main.css.map
+>>>>>>> 2faff58fd1432e15392fe1320875a24cc66e2675

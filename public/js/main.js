@@ -4,6 +4,7 @@ import { MoreProducts } from "./moreProducts.js";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { renderSearchRecom } from "./searchUI.js";
 =======
 import { renderSearchRecom, requestJsonp } from "./searchUI.js";
@@ -20,6 +21,11 @@ import { renderSearchRecom } from "./searchUI.js";
 
 window.addEventListener("DOMContentLoaded", () => {
 >>>>>>> 21f3c32... [refactor] PR review:  use async await
+=======
+import { renderSearchRecom, requestJsonp } from "./searchUI.js";
+
+window.addEventListener("DOMContentLoaded", () => {
+>>>>>>> 2faff58fd1432e15392fe1320875a24cc66e2675
   const getNode = (className) => document.querySelector(className);
   const slideList = getNode(".slide_list");
   const nextBtn = getNode(".next_button");
@@ -30,6 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const mBtn = new MoreProducts();
   mBtn.renderHTML();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,3 +82,8 @@ renderSearchRecom();
   requestJsonp("자동차", "responseJsonpData");
 });
 >>>>>>> 2faff58... [fix] jsonp callback url part
+=======
+  renderSearchRecom();
+  requestJsonp("자동차", "responseJsonpData");
+});
+>>>>>>> 2faff58fd1432e15392fe1320875a24cc66e2675

@@ -12,6 +12,7 @@ const rightOL = _.$(".recBox_rightOL");
 const searchDiv = _.$(".area_top__search");
 const searchInput = _.$(".area_top__search_input");
 const searchRecBox = _.$(".area_top__search_recBox");
+<<<<<<< HEAD
 
 const loadDatas = async (url) => {
   const data = await fetch(url);
@@ -59,6 +60,9 @@ const loadDatas = (url) => {
 >>>>>>> bc4598d... [refactor] prReview: change setInterval to setTimeout
 =======
 >>>>>>> 16e81ed... conflict test
+=======
+
+>>>>>>> 2faff58fd1432e15392fe1320875a24cc66e2675
 const loadDatas = async (url) => {
   const data = await fetch(url);
   const dataJson = await data.json();
@@ -70,6 +74,7 @@ const renderSearchRecom = async () => {
   makeHTML(datas.list);
   renderRecomBox(datas.list);
 <<<<<<< HEAD
+<<<<<<< HEAD
   startRolling();
 >>>>>>> 21f3c32... [refactor] PR review:  use async await
 =======
@@ -78,10 +83,14 @@ const renderSearchRecom = async () => {
 >>>>>>> bc4598d... [refactor] prReview: change setInterval to setTimeout
 =======
 >>>>>>> 16e81ed... conflict test
+=======
+  startRolling(datas.list);
+>>>>>>> 2faff58fd1432e15392fe1320875a24cc66e2675
 };
 
 const makeHTML = (datas) => {
   //Ul, Li 만드는 부분...s
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,14 +115,21 @@ const makeHTML = (datas) => {
 >>>>>>> 16e81ed... conflict test
   let recomUlinnerHtml = "";
   const recomUl = _.$(".area_top__recomList");
+=======
+  let recomUlinnerHtml = "";
+  const recomUl = _.$(".area_top__recomList");
+>>>>>>> 2faff58fd1432e15392fe1320875a24cc66e2675
   datas.forEach(
     (data, i) => (recomUlinnerHtml += `<li> ${i + 1}  ${data.keyword}</li>`)
   );
   recomUl.innerHTML = recomUlinnerHtml + getFirstLi(datas);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 21f3c32... [refactor] PR review:  use async await
 =======
 >>>>>>> 16e81ed... conflict test
+=======
+>>>>>>> 2faff58fd1432e15392fe1320875a24cc66e2675
 };
 
 const getFirstLi = (datas) => {
@@ -198,6 +214,7 @@ export { renderSearchRecom };
   return `<li id="firstClone"> 1  ${datas[0].keyword}</li>`;
 >>>>>>> 1b17b97... [add] setInterval function to move searchUI
 };
+<<<<<<< HEAD
 =======
   return `<li id="firstClone"> 1  ${datas[0].keyword}</li>`;
 };
@@ -207,6 +224,13 @@ const startRolling = (datas) => {
   const liHeight = 37;
   let counter = 0;
 
+=======
+
+const startRolling = (datas) => {
+  const liHeight = 37;
+  let counter = 0;
+
+>>>>>>> 2faff58fd1432e15392fe1320875a24cc66e2675
   const roll = () =>
     new Promise((resolve) =>
       setTimeout(() => {
@@ -282,6 +306,7 @@ searchInput.addEventListener("input", () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { loadDatas, recomKeywordURL };
 >>>>>>> 589b5be... [add] ul in html and make li by javascript
 =======
@@ -293,3 +318,6 @@ export { renderSearchRecom };
 =======
 export { renderSearchRecom, requestJsonp };
 >>>>>>> 2faff58... [fix] jsonp callback url part
+=======
+export { renderSearchRecom, requestJsonp };
+>>>>>>> 2faff58fd1432e15392fe1320875a24cc66e2675
