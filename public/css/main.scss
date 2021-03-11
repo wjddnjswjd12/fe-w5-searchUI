@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  outline: red;
+>>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
 }
 
 button,
@@ -26,7 +30,10 @@ header {
   height: 193px;
   padding-top: 43px;
   border-bottom: 1px solid #cecfd1;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
   .area_top {
     width: 843px;
     height: 55px;
@@ -45,14 +52,19 @@ header {
       border: 1px solid #cecfd1;
       border-radius: 10px;
       padding-left: 30px;
+<<<<<<< HEAD
 
       .area_top__search_input {
+=======
+      input {
+>>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
         width: 92%;
         height: 100%;
         border: none;
         font-weight: bold;
         font-size: 20px;
       }
+<<<<<<< HEAD
 
       .area_top__search_input:focus {
         outline: none;
@@ -62,11 +74,18 @@ header {
         height: 100%;
         width: 8%;
         color: #ff2d2d;
+=======
+      button {
+        height: 100%;
+        width: 8%;
+        color: rgb(255, 45, 45);
+>>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
         position: absolute;
         font-size: 23px;
         top: 0;
         right: 0;
       }
+<<<<<<< HEAD
       .area_top__search_recRoll {
         position: absolute;
         width: 80%;
@@ -146,6 +165,10 @@ header {
     }
   }
 
+=======
+    }
+  }
+>>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
   nav {
     width: 100vw;
     height: 55px;

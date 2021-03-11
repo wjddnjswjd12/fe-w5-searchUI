@@ -1,5 +1,9 @@
 class MoreProducts {
   constructor() {
+<<<<<<< HEAD
+=======
+    //
+>>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
     this.rawData = {};
     this.seeMoreBtn = document.querySelector(".section_products_seeMore");
     this.addEvents();
@@ -48,4 +52,9 @@ class MoreProducts {
   }
 }
 
+<<<<<<< HEAD
 export { MoreProducts };
+=======
+const mBtn = new MoreProducts();
+mBtn.renderHTML();
+>>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축

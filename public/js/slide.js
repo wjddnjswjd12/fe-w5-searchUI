@@ -5,10 +5,18 @@ class Slide {
     this.prevBtn = prevBtn;
     this.rawDatas = {};
     this.counter = 1;
+<<<<<<< HEAD
     this.size = 514;
     this.addEvent();
   }
   loadSlideItems() {
+=======
+    this.size = 514; //slide 한개의 크기. 다르게 받아볼 예정...
+    this.addEvent();
+  }
+  loadSlideItems() {
+    //강의..url넘기는거 수정해보기....
+>>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
     return fetch("http://localhost:3000/planningEvent.json").then((response) =>
       response.json()
     );
@@ -78,4 +86,16 @@ class Slide {
   }
 }
 
+<<<<<<< HEAD
 export { Slide };
+=======
+window.addEventListener("load", () => {
+  const getNode = (className) => document.querySelector(className);
+  const slideList = getNode(".slide_list");
+  const nextBtn = getNode(".next_button");
+  const prevBtn = getNode(".prev_button");
+
+  const carouselSlide = new Slide(slideList, nextBtn, prevBtn);
+  carouselSlide.renderHtml();
+});
+>>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
