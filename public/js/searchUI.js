@@ -35,6 +35,7 @@ const searchInput = _.$(".area_top__search_input");
 const searchRecBox = _.$(".area_top__search_recBox");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const liHeight = 37;
 let counter = 0;
 
@@ -56,6 +57,8 @@ const loadDatas = (url) => {
 =======
 =======
 >>>>>>> bc4598d... [refactor] prReview: change setInterval to setTimeout
+=======
+>>>>>>> 16e81ed... conflict test
 const loadDatas = async (url) => {
   const data = await fetch(url);
   const dataJson = await data.json();
@@ -71,11 +74,15 @@ const renderSearchRecom = async () => {
 >>>>>>> 21f3c32... [refactor] PR review:  use async await
 =======
   startRolling(datas.list);
+<<<<<<< HEAD
 >>>>>>> bc4598d... [refactor] prReview: change setInterval to setTimeout
+=======
+>>>>>>> 16e81ed... conflict test
 };
 
 const makeHTML = (datas) => {
   //Ul, Li 만드는 부분...s
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   let recomUlinnerHtml = "";
@@ -95,17 +102,23 @@ const makeHTML = (datas) => {
   recomUl.innerHTML = str + getFirstLi(datas);
 >>>>>>> 1b17b97... [add] setInterval function to move searchUI
 =======
+=======
+>>>>>>> 16e81ed... conflict test
   let recomUlinnerHtml = "";
   const recomUl = _.$(".area_top__recomList");
   datas.forEach(
     (data, i) => (recomUlinnerHtml += `<li> ${i + 1}  ${data.keyword}</li>`)
   );
   recomUl.innerHTML = recomUlinnerHtml + getFirstLi(datas);
+<<<<<<< HEAD
 >>>>>>> 21f3c32... [refactor] PR review:  use async await
+=======
+>>>>>>> 16e81ed... conflict test
 };
 
 const getFirstLi = (datas) => {
   //
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return `<li id="firstClone"> 1  ${datas[0].keyword}</li>`;
@@ -185,6 +198,10 @@ export { renderSearchRecom };
   return `<li id="firstClone"> 1  ${datas[0].keyword}</li>`;
 >>>>>>> 1b17b97... [add] setInterval function to move searchUI
 };
+=======
+  return `<li id="firstClone"> 1  ${datas[0].keyword}</li>`;
+};
+>>>>>>> 16e81ed... conflict test
 
 const startRolling = (datas) => {
   const liHeight = 37;
@@ -258,4 +275,7 @@ export { loadDatas, recomKeywordURL };
 >>>>>>> 589b5be... [add] ul in html and make li by javascript
 =======
 export { renderSearchRecom };
+<<<<<<< HEAD
 >>>>>>> 21f3c32... [refactor] PR review:  use async await
+=======
+>>>>>>> 16e81ed... conflict test
