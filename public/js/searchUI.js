@@ -37,6 +37,7 @@ const searchRecBox = _.$(".area_top__search_recBox");
 const liHeight = 37;
 let counter = 0;
 
+<<<<<<< HEAD
 >>>>>>> 1b17b97... [add] setInterval function to move searchUI
 const loadDatas = (url) => {
   fetch(url)
@@ -51,10 +52,24 @@ const loadDatas = (url) => {
       renderRecomBox(result);
     });
 >>>>>>> 0133fc7... [add] eventListener on searchBox
+=======
+const loadDatas = async (url) => {
+  const data = await fetch(url);
+  const dataJson = await data.json();
+  return dataJson;
+};
+
+const renderSearchRecom = async () => {
+  const datas = await loadDatas(recomKeywordURL);
+  makeHTML(datas.list);
+  renderRecomBox(datas.list);
+  startRolling();
+>>>>>>> 21f3c32... [refactor] PR review:  use async await
 };
 
 const makeHTML = (datas) => {
   //Ul, Li 만드는 부분...s
+<<<<<<< HEAD
 <<<<<<< HEAD
   let recomUlinnerHtml = "";
   const recomUl = _.$(".area_top__recomList");
@@ -72,6 +87,14 @@ const makeHTML = (datas) => {
 =======
   recomUl.innerHTML = str + getFirstLi(datas);
 >>>>>>> 1b17b97... [add] setInterval function to move searchUI
+=======
+  let recomUlinnerHtml = "";
+  const recomUl = _.$(".area_top__recomList");
+  datas.forEach(
+    (data, i) => (recomUlinnerHtml += `<li> ${i + 1}  ${data.keyword}</li>`)
+  );
+  recomUl.innerHTML = recomUlinnerHtml + getFirstLi(datas);
+>>>>>>> 21f3c32... [refactor] PR review:  use async await
 };
 
 const getFirstLi = (datas) => {
@@ -156,18 +179,19 @@ export { renderSearchRecom };
 >>>>>>> 1b17b97... [add] setInterval function to move searchUI
 };
 
-searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
-
-setInterval(() => {
-  searchUl.style.transition = "transform 0.3s ease-in-out";
-  counter++;
+const startRolling = () => {
   searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
-  if (counter === 13) {
-    searchUl.style.transition = "none";
-    counter = 0;
+  setInterval(() => {
+    searchUl.style.transition = "transform 0.3s ease-in-out";
+    counter++;
     searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
-  }
-}, 2000);
+    if (counter === 13) {
+      searchUl.style.transition = "none";
+      counter = 0;
+      searchUl.style.transform = `translateY(-${counter * liHeight}px)`;
+    }
+  }, 2000);
+};
 
 const getRecomBoxData = (datas, start, end) => {
   //클릭하면 추천검색어 뜨게하는 function
@@ -190,10 +214,10 @@ const renderRecomBox = (datas) => {
 };
 
 ulDiv.addEventListener("click", (e) => {
-  searchUl.classList.toggle("flex");
-  searchDiv.classList.toggle("border_red");
+  searchUl.classList.remove("flex");
+  searchDiv.classList.add("border_red");
   searchInput.focus();
-  searchRecBox.classList.toggle("none");
+  searchRecBox.classList.remove("none");
   e.stopPropagation();
 });
 
@@ -208,5 +232,9 @@ searchInput.addEventListener("input", () => {
   _.$(".area_top__search_recBox").innerHTML = "";
 });
 
+<<<<<<< HEAD
 export { loadDatas, recomKeywordURL };
 >>>>>>> 589b5be... [add] ul in html and make li by javascript
+=======
+export { renderSearchRecom };
+>>>>>>> 21f3c32... [refactor] PR review:  use async await
