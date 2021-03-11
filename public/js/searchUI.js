@@ -25,6 +25,7 @@ const renderSearchRecom = async () => {
 };
 
 const makeHTML = (datas) => {
+  //Ul, Li 만드는 부분...s
   let recomUlinnerHtml = "";
   const recomUl = _.$(".area_top__recomList");
   datas.forEach(
@@ -34,6 +35,7 @@ const makeHTML = (datas) => {
 };
 
 const getFirstLi = (datas) => {
+  //
   return `<li id="firstClone"> 1  ${datas[0].keyword}</li>`;
 };
 
@@ -104,26 +106,6 @@ searchInput.addEventListener("input", () => {
   _.$(".area_top__search_recBox").innerHTML = "";
 });
 
-const getRecomBoxData = (datas, start, end) => {
-  //클릭하면 추천검색어 뜨게하는 function
-  let arr = [];
-  for (let i = start; i < end; i++) {
-    arr.push(datas[i].keyword);
-  }
-
-  return arr.reduce((acc, curr, i) => {
-    acc += `<li class="recomList_li"><span class="recomList_num">${
-      i + 1 + start
-    }</span> ${curr}</li>`;
-    return acc;
-  }, "");
-};
-
-const renderRecomBox = (datas) => {
-  leftOL.innerHTML = getRecomBoxData(datas, 0, 5);
-  rightOL.innerHTML = getRecomBoxData(datas, 5, 10);
-};
-
 function requestJsonp(word, callback) {
   const script = document.createElement("script");
   script.src = `https://suggest-bar.daum.net/suggest?callback=${callback}&limit=10&mode=json&code=utf_in_out&q=${word}&id=shoppinghow_suggest`;
@@ -133,24 +115,5 @@ function requestJsonp(word, callback) {
 window["responseJsonpData"] = function (data) {
   console.log(data);
 };
-
-ulDiv.addEventListener("click", (e) => {
-  searchUl.classList.remove("flex");
-  searchDiv.classList.add("border_red");
-  searchInput.focus();
-  searchRecBox.classList.remove("none");
-  e.stopPropagation();
-});
-
-_.$("body").addEventListener("click", (e) => {
-  searchUl.classList.add("flex");
-  searchDiv.classList.remove("border_red");
-  searchRecBox.classList.add("none");
-  searchInput.blur();
-});
-
-searchInput.addEventListener("input", () => {
-  _.$(".area_top__search_recBox").innerHTML = "";
-});
 
 export { renderSearchRecom, requestJsonp };

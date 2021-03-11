@@ -1,12 +1,5 @@
 class MoreProducts {
   constructor() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    //
->>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
-=======
->>>>>>> 589b5be... [add] ul in html and make li by javascript
     this.rawData = {};
     this.seeMoreBtn = document.querySelector(".section_products_seeMore");
     this.addEvents();
@@ -55,13 +48,4 @@ class MoreProducts {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export { MoreProducts };
-=======
-const mBtn = new MoreProducts();
-mBtn.renderHTML();
->>>>>>> aaa55f3... [first commit] 이전 html, css 저장 및 express환경 새로 구축
-=======
-export { MoreProducts };
->>>>>>> 589b5be... [add] ul in html and make li by javascript
